@@ -3,3 +3,55 @@
     margin:0;
     padding:0;
 }
+
+.tw-slider-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-evenly;
+    height:auto;
+    width:100vw;
+    margin:10px auto;
+    background-color: black;
+    .tw-slider-elements-container{
+        display:flex;
+        overflow-x:hidden;
+        width:100%;
+    .tw-slider-element{
+        width:30%;
+        margin:20px 30px;
+        display:flex;
+        flex-wrap:wrap;
+        justify-content: center;
+        background-color:rgb(63, 63, 62);
+        .tw-slider-element-img{
+            width: 400px;
+            height: auto;
+        }
+        .tw-slider-element-heading{
+            margin:20px auto;
+            font-size:18px;
+            color:white;
+        }
+    }
+}
+    .tw-slider-dots{
+        display:flex;
+        justify-content: center;
+        width:auto;
+        margin:10px auto;
+        .tw-slider-dot{
+            width:20px;
+            height:20px;
+            border-radius: 50%;
+            background-color: white;
+            margin:10px;
+        }
+        .tw-slider-dot:hover{
+            cursor:pointer;
+            background-color: rgb(105, 105, 105);
+            
+        }
+    }
+   
+
+}
