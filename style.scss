@@ -8,31 +8,56 @@
     display:flex;
     flex-wrap:wrap;
     justify-content: space-evenly;
-    height:auto;
+    height:650px;
     width:100vw;
     margin:10px auto;
     background-color: black;
+    overflow:hidden;
+    position:relative;
+    @media(max-width:600px){
+       height:300px; 
+    }
     .tw-slider-elements-container{
         display:flex;
-        overflow-x:hidden;
+        overflow:hidden;
         width:100%;
+        height:80%;
+        transition:0.3s linear;
+        position: relative;
     .tw-slider-element{
-        width:30%;
-        margin:20px 30px;
-        display:flex;
+        width:100%;
+        margin:20px 10px;
+        position: absolute;
+        top: 0;
+        height: auto;
+        display: flex;
         flex-wrap:wrap;
+        align-items: center;
         justify-content: center;
-        background-color:rgb(63, 63, 62);
+        transition: transform 0.5s;
         .tw-slider-element-img{
-            width: 400px;
+            width: 60%;
+            margin:0 auto;
             height: auto;
         }
         .tw-slider-element-heading{
             margin:20px auto;
             font-size:18px;
             color:white;
+            width:100%;
+            text-align:center;
         }
     }
+    @media(max-width:600px){
+        .tw-slider-element{
+            width:95%;
+            .tw-slider-element-img{
+                width: 90%;
+                margin:0 auto;
+                height: auto;
+            }  
+    }
+}
 }
     .tw-slider-dots{
         display:flex;
@@ -53,5 +78,30 @@
         }
     }
    
+
+    .btns {
+        .slider__btn {
+            z-index: 10;
+            border: 2px solid #05BCB4;
+            background: #fff;
+            font-family: inherit;
+            color: #05BCB4;
+            border-radius: 50%;
+            height: 30px;
+            width: 30px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        .slider__btn--left{
+            position: absolute;
+            top:28%;
+            left:1%;
+        }
+        .slider__btn--right{
+            position: absolute;
+            top:28%;
+            right:1%;
+        }
+    }
 
 }
